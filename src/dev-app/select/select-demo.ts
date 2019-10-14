@@ -8,7 +8,7 @@
 
 import {Component} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import {ErrorStateMatcher, ThemePalette} from '@angular/material/core';
 import {MatSelectChange} from '@angular/material/select';
 
 /** Error any time control is invalid */
@@ -41,12 +41,12 @@ export class SelectDemo {
   currentDigimon: string;
   currentAppearanceValue: string | null;
   latestChangeEvent: MatSelectChange;
-  floatLabel = 'auto';
+  floatLabel: 'always' | 'never' | 'auto' = 'auto';
   drinksWidth = 'default';
   foodControl = new FormControl('pizza-1');
   topHeightCtrl = new FormControl(0);
-  drinksTheme = 'primary';
-  pokemonTheme = 'primary';
+  drinksTheme: ThemePalette = 'primary';
+  pokemonTheme: ThemePalette = 'primary';
   compareByValue = true;
   selectFormControl = new FormControl('', Validators.required);
 

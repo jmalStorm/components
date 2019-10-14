@@ -19,12 +19,12 @@ import {MatAccordion} from '@angular/material/expansion';
 export class ExpansionDemo {
   @ViewChild(MatAccordion, {static: false}) accordion: MatAccordion;
 
-  displayMode = 'default';
+  displayMode: 'default' | 'flat' = 'default';
   multi = false;
   hideToggle = false;
   disabled = false;
   showPanel3 = true;
-  togglePosition = 'after';
+  togglePosition: 'before' | 'after' = 'after';
   expandedHeight: string;
   collapsedHeight: string;
   events: string[] = [];

@@ -23,7 +23,7 @@ const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA
   styleUrls: ['input-demo.css'],
 })
 export class InputDemo {
-  floatingLabel = 'auto';
+  floatingLabel: 'always' | 'never' | 'auto' = 'auto';
   color: boolean;
   requiredField: boolean;
   hideRequiredMarker: boolean;

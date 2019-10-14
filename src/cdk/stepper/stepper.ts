@@ -124,7 +124,8 @@ export class CdkStep implements OnChanges {
   @ViewChild(TemplateRef, {static: true}) content: TemplateRef<any>;
 
   /** The top level abstract control of the step. */
-  @Input() stepControl: FormControlLike;
+  // TODO figure out how to support FormGroup here
+  @Input() stepControl: FormControlLike | any;
 
   /** Whether user has seen the expanded step content or not. */
   interacted = false;

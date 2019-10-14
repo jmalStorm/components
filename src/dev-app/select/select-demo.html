@@ -174,7 +174,7 @@ Space above cards: <input type="number" [formControl]="topHeightCtrl">
       <mat-select [(ngModel)]="currentDrink" [required]="drinksRequired"
         [disabled]="drinksDisabled" #drinkControl="ngModel">
         <mat-option>None</mat-option>
-        <mat-option *ngFor="let drink of drinks" [value]="drink.value" [disabled]="drink.disabled">
+        <mat-option *ngFor="let drink of drinks" [value]="drink.value">
           {{ drink.viewValue }}
         </mat-option>
       </mat-select>
@@ -293,7 +293,7 @@ Space above cards: <input type="number" [formControl]="topHeightCtrl">
                     [required]="drinkObjectRequired"
                     [compareWith]="compareByValue ? compareDrinkObjectsByValue : compareByReference"
                     #drinkObjectControl="ngModel">
-          <mat-option *ngFor="let drink of drinks" [value]="drink" [disabled]="drink.disabled">
+          <mat-option *ngFor="let drink of drinks" [value]="drink">
             {{ drink.viewValue }}
           </mat-option>
         </mat-select>

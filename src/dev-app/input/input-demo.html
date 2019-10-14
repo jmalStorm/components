@@ -363,6 +363,7 @@
       <mat-form-field class="demo-text-align-end">
         <mat-label>Email address</mat-label>
         <input matInput #email value="angular-core">
+        <!-- TODO Figure out how to resolve "Property 'focused' does not exist on type 'HTMLInputElement'." -->
         <span matPrefix><mat-icon [class.primary]="email.focused">email</mat-icon>&nbsp;</span>
         <span matSuffix [class.primary]="email.focused">&nbsp;@gmail.com</span>
       </mat-form-field>
@@ -548,6 +549,7 @@
       <label>minRows<input type="number" #minRows class="demo-rows" (input)="1+1"></label> &nbsp;
       <label>maxRows<input type="number" #maxRows class="demo-rows" (input)="1+1"></label>
     </div>
+   <!-- TODO Figure out how to bind values from template variables minRows and maxRows -->
     <textarea class="demo-textarea"
         cdkTextareaAutosize
         [cdkAutosizeMinRows]="minRows.value"

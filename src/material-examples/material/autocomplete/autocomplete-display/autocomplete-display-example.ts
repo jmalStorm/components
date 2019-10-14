@@ -33,8 +33,8 @@ export class AutocompleteDisplayExample implements OnInit {
       );
   }
 
-  displayFn(user?: User): string | undefined {
-    return user ? user.name : undefined;
+  displayFn(user?: User): string {
+    return user ? user.name : 'Unknown';
   }
 
   private _filter(name: string): User[] {
